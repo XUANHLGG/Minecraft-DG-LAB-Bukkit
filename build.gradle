@@ -12,18 +12,10 @@ repositories {
         name = "spigotmc-repo"
         url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
     }
-    // ProtocolLib
-    maven {
-        name = "dmulloy2-repo"
-        url = "https://repo.dmulloy2.net/repository/public/"
-    }
 }
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
-
-    // ProtocolLib (optional at runtime; we only compile against it)
-    compileOnly("com.comphenix.protocol:ProtocolLib:5.3.0")
 
     // WebSocket server (Netty)
     implementation("io.netty:netty-all:4.1.118.Final")

@@ -33,8 +33,6 @@ public final class bukkit extends JavaPlugin implements Listener {
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, DgLabChannels.CLEAR_STRENGTH);
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, DgLabChannels.SHOW_QR_CODE);
 
-        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "minecraft:brand");
-
         scriptRuntime = new ScriptRuntime(this);
         scriptManager = new ScriptManager(this, scriptRuntime);
         Bukkit.getPluginManager().registerEvents(new ScriptEventListener(scriptRuntime), this);
@@ -71,7 +69,6 @@ public final class bukkit extends JavaPlugin implements Listener {
         
         UUID u = event.getPlayer().getUniqueId();
         DgLabConnectionManager.disconnectByPlayer(u);
-        CustomPayloadSender.clearRegisterState(u);
     }
 
     @org.bukkit.event.EventHandler
@@ -79,7 +76,6 @@ public final class bukkit extends JavaPlugin implements Listener {
         
         UUID u = event.getPlayer().getUniqueId();
         DgLabConnectionManager.disconnectByPlayer(u);
-        CustomPayloadSender.clearRegisterState(u);
     }
 
     public void reloadPlugin() {
