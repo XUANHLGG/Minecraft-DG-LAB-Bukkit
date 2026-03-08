@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+run/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.settings/
+.classpath
+.project
+bin/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log

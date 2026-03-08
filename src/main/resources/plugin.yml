@@ -1,0 +1,16 @@
+name: dglab
+version: '${version}'
+main: com.tendoarisu.dglab.bukkit
+api-version: '1.21'
+depend:
+  - ProtocolLib
+
+commands:
+  dglab:
+    description: 与 DG-LAB Mod 进行交互。
+    usage: /dglab <connect|disconnect|reload>
+
+permissions:
+  dglab.admin:
+    description: 允许使用 /dglab reload 命令。
+    default: op
